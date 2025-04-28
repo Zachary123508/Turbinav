@@ -1,0 +1,93 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+  background: #1A2B49;
+}
+
+.hero {
+  background: #1A2B49;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.cta-button {
+  background: #B0B7C3;
+  color: #1A2B49;
+  padding: 0.8rem 2rem;
+  border: none;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section.light {
+  background: #fafafa;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer {
+  background: #1A2B49;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
