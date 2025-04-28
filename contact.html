@@ -24,12 +24,18 @@
   <div class="container">
     <h1>Schedule a Consultation</h1>
     <form action="https://formspree.io/f/mqkoynlp" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="business" placeholder="Business Name (optional)">
-      
-      <select name="service" required>
-        <option value="">Select the service you need</option>
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="business">Business Name (optional)</label>
+      <input type="text" name="business" id="business">
+
+      <label for="service">Select the service you need</label>
+      <select name="service" id="service" required>
+        <option value="">-- Please Select --</option>
         <option value="Automated Scheduling Systems">Automated Scheduling Systems</option>
         <option value="Smart Invoicing and Payment Systems">Smart Invoicing and Payment Systems</option>
         <option value="Customer Follow-Up Automations">Customer Follow-Up Automations</option>
@@ -38,7 +44,8 @@
         <option value="Other">Other (please describe below)</option>
       </select>
 
-      <textarea name="customDescription" rows="5" placeholder="Describe your needs or problems here..." required></textarea>
+      <label for="customDescription">Describe your needs or problems</label>
+      <textarea name="customDescription" id="customDescription" rows="5" required></textarea>
 
       <button type="button" id="acknowledgeButton">I have read and agree to the Privacy Policy</button>
       <button type="submit" id="submitButton" style="display:none;">Schedule Consultation</button>
