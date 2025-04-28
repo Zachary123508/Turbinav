@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Turbinav Systems</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-container">
+    <img src="images/logo.png" alt="Turbinav Systems Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Schedule a Consultation</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="business" placeholder="Business Name (optional)">
+      
+      <select name="service" required>
+        <option value="">Select the service you need</option>
+        <option value="Automated Scheduling Systems">Automated Scheduling Systems</option>
+        <option value="Smart Invoicing and Payment Systems">Smart Invoicing and Payment Systems</option>
+        <option value="Customer Follow-Up Automations">Customer Follow-Up Automations</option>
+        <option value="Financial Systems Streamlining">Financial Systems Streamlining</option>
+        <option value="Full Business Systems Overhaul">Full Business Systems Overhaul</option>
+        <option value="Other">Other (please describe below)</option>
+      </select>
+
+      <textarea name="customDescription" rows="5" placeholder="Describe your needs or problems here..." required></textarea>
+
+      <button type="button" id="acknowledgeButton">I have read and agree to the Privacy Policy</button>
+      <button type="submit" id="submitButton" style="display:none;">Schedule Consultation</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-container">
+    <img src="images/logo.png" alt="Turbinav Systems Logo Small" class="footer-logo">
+    <p>Turbinav Systems © 2025 • <a href="privacy.html" target="_blank">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+// Script to handle Privacy Policy Acknowledgement
+document.getElementById('acknowledgeButton').onclick = function() {
+  document.getElementById('acknowledgeButton').style.display = 'none';
+  document.getElementById('submitButton').style.display = 'inline-block';
+};
+</script>
+
+</body>
+</html>
