@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Content Agreement - Turbinav Systems</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="logo.png" alt="Turbinav Systems Logo" class="logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html" class="active">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Terms Content -->
+  <section class="section section--light">
+    <div class="container">
+      <h1>Terms of Content Agreement</h1>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By accessing or using the Turbinav Systems website and related services (the “Site”), you agree to be bound by these Terms of Content Agreement and all applicable laws and regulations. If you do not agree with any part of these terms, you must not access or use the Site.
+      </p>
+
+      <h2>2. Intellectual Property</h2>
+      <p>
+        All content, features, and functionality on this Site—including text, graphics, logos, images, audio clips, and software—are the property of Turbinav Systems or its licensors and are protected by copyright, trademark, and other intellectual property laws.
+      </p>
+
+      <h2>3. Use of Site Content</h2>
+      <p>
+        You may view, download, and print pages from the Site for your personal, non-commercial use, provided you keep all copyright and other proprietary notices intact. You may not modify, reproduce, distribute, or create derivative works from any content except as expressly authorized by Turbinav Systems in writing.
+      </p>
+
+      <h2>4. User-Generated Content</h2>
+      <p>
+        If you submit any feedback, comments, or other content (“Contributions”) to the Site, you grant Turbinav Systems a worldwide, perpetual, irrevocable, royalty-free, fully sublicensable license to use, reproduce, modify, adapt, publish, translate, distribute, and display such Contributions in any media.
+      </p>
+
+      <h2>5. Prohibited Conduct</h2>
+      <p>
+        When using the Site you agree not to:
+      </p>
+      <ul class="choose-list">
+        <li>Post or transmit material that is defamatory, obscene, or otherwise unlawful.</li>
+        <li>Use the Site to harass, abuse, or harm another person.</li>
+        <li>Interfere with the security or integrity of our network or data.</li>
+        <li>Attempt to gain unauthorized access to other user accounts.</li>
+      </ul>
+
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>
+        The Site and all content are provided “as is” and “as available” without warranties of any kind, express or implied. Turbinav Systems disclaims all warranties, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
+      </p>
+
+      <h2>7. Limitation of Liability</h2>
+      <p>
+        In no event shall Turbinav Systems be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits or data, arising out of your access to or use of the Site.
+      </p>
+
+      <h2>8. Indemnification</h2>
+      <p>
+        You agree to defend, indemnify, and hold harmless Turbinav Systems and its officers, directors, employees, and agents from any and all claims, damages, losses, liabilities, costs, or expenses arising out of your use of the Site or your breach of these Terms.
+      </p>
+
+      <h2>9. Modifications</h2>
+      <p>
+        Turbinav Systems may modify these Terms at any time by posting the revised terms on this page. Your continued use of the Site after any changes indicates your acceptance of the new Terms.
+      </p>
+
+      <h2>10. Governing Law</h2>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws of the State of Connecticut, without regard to its conflict of law provisions.
+      </p>
+
+      <h2>11. Contact Information</h2>
+      <p>
+        If you have any questions about these Terms, please contact us at
+        <a href="mailto:support@turbinav.com">support@turbinav.com</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-email">
+          <a href="mailto:support@turbinav.com">support@turbinav.com</a>
+        </p>
+        <img src="logo.png" alt="Turbinav Systems Logo Small" class="footer-logo">
+      </div>
+      <div class="footer-right">
+        <p>
+          Turbinav Systems © 2025 &bull;
+          <a href="privacy.html" target="_blank">Privacy Policy</a> &bull;
+          <a href="terms.html" target="_blank">Terms of Content Agreement</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
