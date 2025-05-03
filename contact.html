@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Turbinav Systems</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="header-container">
-    <img src="images/logo.png" alt="Turbinav Systems Logo" class="logo">
+    <img src="logo.png" alt="Turbinav Systems Logo" class="logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -22,50 +22,99 @@
 
 <section class="section">
   <div class="container">
-    <h1>Schedule a Consultation</h1>
-    <form action="https://formspree.io/f/mqkoynlp" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required>
+    <div class="contact-form">
+      <h1>Schedule a Consultation</h1>
+      <form action="https://formspree.io/f/mqkoynlp" method="POST">
 
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-      <label for="business">Business Name (optional)</label>
-      <input type="text" name="business" id="business">
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-      <label for="service">Select the service you need</label>
-      <select name="service" id="service" required>
-        <option value="">-- Please Select --</option>
-        <option value="Automated Scheduling Systems">Automated Scheduling Systems</option>
-        <option value="Smart Invoicing and Payment Systems">Smart Invoicing and Payment Systems</option>
-        <option value="Customer Follow-Up Automations">Customer Follow-Up Automations</option>
-        <option value="Financial Systems Streamlining">Financial Systems Streamlining</option>
-        <option value="Full Business Systems Overhaul">Full Business Systems Overhaul</option>
-        <option value="Other">Other (please describe below)</option>
-      </select>
+        <div class="form-group">
+          <label for="business">Business Name (optional)</label>
+          <input type="text" id="business" name="business">
+        </div>
 
-      <label for="customDescription">Describe your needs or problems</label>
-      <textarea name="customDescription" id="customDescription" rows="5" required></textarea>
+        <div class="form-group">
+          <label for="meetingMethod">Preferred Meeting Method</label>
+          <select id="meetingMethod" name="meetingMethod" required>
+            <option value="">-- Please Select --</option>
+            <option value="Phone Call">Phone Call</option>
+            <option value="Virtual Meeting">Virtual Meeting</option>
+            <option value="In-Person">In-Person</option>
+            <option value="Email Only">Email Only</option>
+          </select>
+        </div>
 
-      <button type="button" id="acknowledgeButton">I have read and agree to the Privacy Policy</button>
-      <button type="submit" id="submitButton" style="display:none;">Schedule Consultation</button>
-    </form>
+        <div class="form-group hidden" id="address-group">
+          <label for="address">Business Address</label>
+          <input type="text" id="address" name="address">
+        </div>
+
+        <div class="form-group" id="phone-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <div class="form-group">
+          <label for="service">Select the service you need</label>
+          <select id="service" name="service" required>
+            <option value="">-- Please Select --</option>
+            <option value="Automated Scheduling Systems">Automated Scheduling Systems</option>
+            <option value="Smart Invoicing and Payment Systems">Smart Invoicing and Payment Systems</option>
+            <option value="Customer Follow-Up Automations">Customer Follow-Up Automations</option>
+            <option value="Financial Systems Streamlining">Financial Systems Streamlining</option>
+            <option value="Full Business Systems Overhaul">Full Business Systems Overhaul</option>
+            <option value="Other">Other (please describe below)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="customDescription">Describe your needs or problems</label>
+          <textarea id="customDescription" name="customDescription" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group buttons">
+          <button type="button" id="acknowledgeButton">I have read and agree to the Privacy Policy</button>
+          <button type="submit" id="submitButton" style="display:none;">Schedule Consultation</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="footer-container">
-    <img src="images/logo.png" alt="Turbinav Systems Logo Small" class="footer-logo">
+    <img src="logo.png" alt="Turbinav Systems Logo Small" class="footer-logo">
     <p>Turbinav Systems © 2025 • <a href="privacy.html" target="_blank">Privacy Policy</a></p>
   </div>
 </footer>
 
 <script>
 // Unlock form submit after acknowledging privacy policy
-document.getElementById('acknowledgeButton').onclick = function() {
-  document.getElementById('acknowledgeButton').style.display = 'none';
-  document.getElementById('submitButton').style.display = 'inline-block';
-};
+const ackBtn = document.getElementById('acknowledgeButton');
+const submitBtn = document.getElementById('submitButton');
+ackBtn.addEventListener('click', () => {
+  ackBtn.style.display = 'none';
+  submitBtn.style.display = 'inline-block';
+});
+
+// Show/hide address based on meeting method
+const meetingMethod = document.getElementById('meetingMethod');
+const addressGroup = document.getElementById('address-group');
+meetingMethod.addEventListener('change', () => {
+  if (meetingMethod.value === 'In-Person') {
+    addressGroup.classList.remove('hidden');
+  } else {
+    addressGroup.classList.add('hidden');
+  }
+});
 </script>
 
 </body>
