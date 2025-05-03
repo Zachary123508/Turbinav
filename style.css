@@ -76,7 +76,7 @@ header nav a:hover {
 }
 
 /*==============================================================================
-  Hero & Tagline
+  Hero & CTA
 ==============================================================================*/
 .hero {
   background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
@@ -104,7 +104,7 @@ header nav a:hover {
 }
 
 /*==============================================================================
-  Sections
+  Sections & Lists
 ==============================================================================*/
 .section {
   padding: 4rem 0;
@@ -121,9 +121,6 @@ header nav a:hover {
   margin-bottom: 1rem;
 }
 
-/*==============================================================================
-  Lists
-==============================================================================*/
 .choose-list,
 .values-list {
   list-style: none;
@@ -156,7 +153,7 @@ header nav a:hover {
 }
 
 /*==============================================================================
-  Team Grid (clickable cards)
+  Meet the Team Grid
 ==============================================================================*/
 .team {
   display: grid;
@@ -176,13 +173,21 @@ header nav a:hover {
 .team-member:hover {
   transform: translateY(-4px);
 }
+/* We’ll still hide <img> here if you prefer, but keep the data-img for the popup */
 .team-member img {
   display: none;
 }
+/* Name styling */
 .team-member p {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0.25rem;
   font-weight: 600;
   color: var(--primary-color);
+}
+/* New: Position under the name */
+.team-member .team-title {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin: 0;
 }
 
 /*==============================================================================
@@ -202,8 +207,7 @@ header nav a:hover {
   margin: 10% auto;
   padding: 1rem;
   border-radius: var(--radius);
-  width: 90%;
-  max-width: 500px;
+  width: 90%; max-width: 500px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -229,8 +233,7 @@ header nav a:hover {
   text-align: center;
 }
 .modal-body img {
-  width: 120px;
-  height: 120px;
+  width: 120px; height: 120px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
@@ -253,26 +256,66 @@ header nav a:hover {
 }
 
 /*==============================================================================
-  Contact Form (repeated here for completeness)
+  Contact Form (for reference)
 ==============================================================================*/
-.contact-form {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin: 2rem auto;
+/* … (keep as-is) … */
+
+/*==============================================================================
+  Footer (simplified)
+==============================================================================*/
+footer {
+  background-color: var(--primary-color);
+  padding: 2rem 0;
+  text-align: left;
 }
-.contact-form h1 {
-  font-size: 1.75rem;
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.contact-form form {
+.footer-container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
-.form-group {
-  displ
+.footer-email {
+  color: white;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.footer-email a {
+  color: white;
+}
+.footer-logo {
+  height: 80px;
+  margin: 0;
+}
+.footer-container p {
+  color: white;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.footer-container a {
+  color: white;
+}
+
+/*==============================================================================
+  Responsive
+==============================================================================*/
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav a {
+    margin: 0.5rem;
+  }
+  .team {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
